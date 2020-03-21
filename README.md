@@ -1,2 +1,2 @@
 # Quokka
-Im trying to learn more about programming and therefor creating this app with java.
+Im trying to learn more about programming and therefore creating this app with java.
