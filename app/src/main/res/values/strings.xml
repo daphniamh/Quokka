@@ -13,6 +13,7 @@
     <string name="random_button_text">Random</string>
     <string name="count_button_text">Count</string>
     <string name="default_text_name">Nief</string>
+    <string name="default_text_greeting">Hi, this is second fragment and it shows a random number between 0 and %d</string>
     <string name="number_output">0</string>
 
 
