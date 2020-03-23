@@ -12,7 +12,8 @@
     <string name="toast_button_text">Toast</string>
     <string name="random_button_text">Random</string>
     <string name="count_button_text">Count</string>
-
+    <string name="default_text_name">Nief</string>
     <string name="number_output">0</string>
+
 
 </resources>
