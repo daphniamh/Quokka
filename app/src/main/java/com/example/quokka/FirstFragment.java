@@ -15,7 +15,7 @@ import androidx.navigation.fragment.NavHostFragment;
 public class FirstFragment extends Fragment {
     //finde items and caching them
     TextView showCountTextView;
-    //EditText auch probieren hier auszulagern
+    EditText text_name_field;
 
     @Override
     public View onCreateView(
@@ -23,10 +23,10 @@ public class FirstFragment extends Fragment {
             Bundle savedInstanceState
     ) {
         // Inflate the layout for this fragment
-        //return inflater.inflate(R.layout.fragment_first, container, false);
-        //vom Tutorial Änderungen ->
         View fragmentFirstLayout = inflater.inflate(R.layout.fragment_first, container, false);
+        //Suchen der Items per View hier einmalig für ganze Klasse
         showCountTextView = fragmentFirstLayout.findViewById(R.id.text_number);
+        text_name_field = fragmentFirstLayout.findViewById(R.id.text_name);
 
         return fragmentFirstLayout;
     }
@@ -44,7 +44,6 @@ public class FirstFragment extends Fragment {
         });
 
         // Methode um Namen als Toast-Message auszugeben
-        final EditText text_name_field = view.findViewById(R.id.text_name); //musste das Textfeld hier ansprechen, damit es gefunden wird
         view.findViewById(R.id.toast_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
