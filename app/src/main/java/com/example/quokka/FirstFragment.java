@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -28,6 +30,16 @@ public class FirstFragment extends Fragment {
             public void onClick(View view) {
                 NavHostFragment.findNavController(FirstFragment.this)
                         .navigate(R.id.action_FirstFragment_to_SecondFragment);
+            }
+        });
+        final EditText text_name_field = view.findViewById(R.id.text_name); //musste das Textfeld hier ansprechen, damit es gefunden wird
+        view.findViewById(R.id.toast_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String name = text_name_field.getText().toString();
+                Toast myToast = Toast.makeText(getActivity(), "Hello "+name+"!", Toast.LENGTH_SHORT);
+                myToast.show();
             }
         });
     }
