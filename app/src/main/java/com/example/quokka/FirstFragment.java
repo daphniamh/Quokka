@@ -15,7 +15,7 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import java.util.Locale;
 
-public class FirstFragment extends Fragment  {
+public class FirstFragment extends Fragment {
     //finde items and caching them
     TextView showCountTextView;
     EditText text_name_field;
@@ -54,7 +54,7 @@ public class FirstFragment extends Fragment  {
             public void onClick(View view) {
 
                 String name = text_name_field.getText().toString();
-                Toast myToast = Toast.makeText(getActivity(), "Hello "+name+"!", Toast.LENGTH_SHORT);
+                Toast myToast = Toast.makeText(getActivity(), "Hello " + name + "!", Toast.LENGTH_SHORT);
                 myToast.show();
             }
         });
@@ -82,19 +82,19 @@ public class FirstFragment extends Fragment  {
         showCountTextView.setText(count.toString()); //display value in textview
     }
 
-   //public void talkSalut(View view){
-   //    view.findViewById(R.id.random_button).setOnClickListener(new View.OnClickListener() {
-   //        @Override
-   //        public void onClick(View view) {
-   //            tts = new TextToSpeech(this, this);
-   //        }
+    //public void talkSalut(View view){
+    //    view.findViewById(R.id.random_button).setOnClickListener(new View.OnClickListener() {
+    //        @Override
+    //        public void onClick(View view) {
+    //            tts = new TextToSpeech(this, this);
+    //        }
 
-   //        public void onInit(int arg0) {
-   //            tts.setLanguage(Locale.FRENCH);
-   //            tts.speak("Salut", TextToSpeech.QUEUE_FLUSH, null);
-   //        }
-   //    });
-   // }
+    //        public void onInit(int arg0) {
+    //            tts.setLanguage(Locale.FRENCH);
+    //            tts.speak("salut", TextToSpeech.QUEUE_FLUSH, null);
+    //        }
+    //    });
+    // }
 
 
 }
