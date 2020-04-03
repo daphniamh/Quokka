@@ -1,5 +1,6 @@
 package com.example.quokka;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.LayoutInflater;
@@ -38,6 +39,7 @@ public class FirstFragment extends Fragment {
         return fragmentFirstLayout;
     }
 
+
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
@@ -59,6 +61,9 @@ public class FirstFragment extends Fragment {
 
                 Toast myToast = Toast.makeText(getActivity(), witz, Toast.LENGTH_LONG);
                 myToast.show();
+                Intent intent = new Intent(getActivity(), BilderGallerieActivity.class);
+                startActivity(intent);
+
             }
         });
 
@@ -88,6 +93,8 @@ public class FirstFragment extends Fragment {
 
 
     }
+
+
 
     //innerhalb der Firstfragment-Class die countMe Methode-beschreiben
     private void countMe(View view) {
