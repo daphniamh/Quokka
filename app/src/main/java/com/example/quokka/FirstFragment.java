@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,6 +20,7 @@ public class FirstFragment extends Fragment {
     //finde items and caching them
     TextView showCountTextView;
     EditText text_name_field;
+    ImageButton button_katze;
     //public TextToSpeech tts;
 
     @Override
@@ -31,6 +33,7 @@ public class FirstFragment extends Fragment {
         //Suchen der Items per View hier einmalig für ganze Klasse
         showCountTextView = fragmentFirstLayout.findViewById(R.id.text_number);
         text_name_field = fragmentFirstLayout.findViewById(R.id.text_name);
+        button_katze = fragmentFirstLayout.findViewById(R.id.button_katze);
 
         return fragmentFirstLayout;
     }
@@ -48,13 +51,25 @@ public class FirstFragment extends Fragment {
             }
         });
 
+        //Anklicken des ImgaeButton button_Katze
+        button_katze.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String witz = getString(R.string.click_katze);  //hole einen string aus den resources
+
+                Toast myToast = Toast.makeText(getActivity(), witz, Toast.LENGTH_LONG);
+                myToast.show();
+            }
+        });
+
         // Methode um Namen als Toast-Message auszugeben
         view.findViewById(R.id.toast_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 String name = text_name_field.getText().toString();
-                Toast myToast = Toast.makeText(getActivity(), "Hello " + name + "!", Toast.LENGTH_SHORT);
+                Toast myToast = Toast.makeText(getActivity(), "Hello " + name
+                        + "!\nDu lächelst – und die Welt verändert sich.", Toast.LENGTH_SHORT);
                 myToast.show();
             }
         });

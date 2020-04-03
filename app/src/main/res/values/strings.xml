@@ -9,12 +9,15 @@
 
     <string name="hello_first_fragment">Hello Quokka Lover!</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="toast_button_text">Toast</string>
+    <string name="toast_button_text">Whats up?</string>
     <string name="random_button_text">Random</string>
     <string name="count_button_text">Count</string>
     <string name="default_text_name">Nief</string>
     <string name="default_text_greeting">Hi, this is second fragment and it shows nothin yet</string>
     <string name="number_output">0</string>
+    <string name="katzenalarm">katzenalarm</string>
+
+    <string name="click_katze">Miauuuuu</string>
 
 
 </resources>
